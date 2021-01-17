@@ -1,2 +1,2 @@
 # RouterJs
-Implementing a router on vanilla JS 
+Implementing a router on vanilla JS 👨‍💻👩‍💻

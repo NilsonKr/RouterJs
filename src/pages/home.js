@@ -23,3 +23,5 @@ const home = () => {
    return view
 }
 
+export default home
+
