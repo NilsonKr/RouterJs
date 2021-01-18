@@ -1,0 +1,6 @@
+import routes from './routes/routes.js';
+import router from './routes/router.js';
+
+const handleRouter = new router(routes)
+
+window.addEventListener('hashchange', () => handleRouter._initialRoute())

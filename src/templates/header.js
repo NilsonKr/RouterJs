@@ -1,14 +1,17 @@
 const header = () => {
     const view = `
         <div class="home">
-            <span>icon</span>
-            <h2>Home</h2>
+            <a href="/">
+                <span></span>
+                <h2>Home</h2>
+            </a>
         </div>
         <div class="details">
-            <h3>Contact</h3>
-            <h3>About</h3>
+            <a href="/contact">Contact</a>
+            <a href="/about">About</a>
         </div>
     `
    return view
 }
 
+export default header
