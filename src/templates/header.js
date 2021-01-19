@@ -7,8 +7,8 @@ const header = () => {
             </a>
         </div>
         <div class="details">
-            <a href="/contact">Contact</a>
-            <a href="/about">About</a>
+            <a href="#/contact/">Contact</a>
+            <a href="#/about/">About</a>
         </div>
     `
    return view

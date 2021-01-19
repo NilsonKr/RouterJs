@@ -1,7 +1,6 @@
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const copyWebpackPlugin = require('copy-webpack-plugin')
-const { resolve } = require('path')
 
 module.exports = {
     entry:'./src/main.js',
