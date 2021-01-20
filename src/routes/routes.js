@@ -7,6 +7,10 @@ import startPost from '../pages/posts/start.js';
 
 const routes = [
     {
+        path: '/home',
+        template : () => home()
+    },
+    {
         path: '/',
         template : () => home()
     },

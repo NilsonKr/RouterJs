@@ -7,7 +7,7 @@ const home = () => {
     </section>
     <section class="main-content">
         <div class="posts">
-            <a href="#/start_post/" onclick="handleRouter._loadRoute('start_post')">
+            <a href="#/start_post/">
                 <img src="https://my1.fr/blog/wp-content/uploads/2019/06/developer-guide-blog-2.png" alt="begin image">
                 <h2>Which Path shall i pick?</h2>
                 <button>See...</button>

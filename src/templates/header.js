@@ -1,7 +1,7 @@
 const header = () => {
     const view = `
         <div class="home">
-            <a href="/">
+            <a href="#/home/">
                 <span></span>
                 <h2>Home</h2>
             </a>

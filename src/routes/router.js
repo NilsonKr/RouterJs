@@ -38,7 +38,7 @@ class router{
     }
 
     findRoute(){
-       
+      
         const hashName = window.location.hash.slice(1).split('/')[1] || ''      //Get the path or slock where we are and delete the '/'
         console.log(hashName)
      /*    const pathSegs = hashName.length > 1? pathName.slice(1) : '/'  */     //Get the path segmenting lacking only the name of the path  example path: '/whatever'  outcome : 'whatever'
