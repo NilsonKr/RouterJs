@@ -7,7 +7,7 @@ class router{
          this.findRoute()
     }
     _loadRoute(pathSegs){
-        document.getElementById('header').innerHTML = header()  //Inserte the header on any page always
+        document.getElementById('header').innerHTML = header()  //Insert the header on any page always
 
         let matchedRoute = this._matchUrlToRoute(pathSegs)  //Find the route that have the right template
       
@@ -38,7 +38,7 @@ class router{
     }
 
     findRoute(){
-      
+        /* debugger */
         const hashName = window.location.hash.slice(1).split('/')[1] || ''      //Get the path or slock where we are and delete the '/'
         console.log(hashName)
      /*    const pathSegs = hashName.length > 1? pathName.slice(1) : '/'  */     //Get the path segmenting lacking only the name of the path  example path: '/whatever'  outcome : 'whatever'
