@@ -19,7 +19,7 @@ class router{
 
         const url = `/${pathSegs}`      
                              
-        history.pushState({},'',url)        //Push the url to the history
+       /*  history.pushState({},'',url)        //Push the url to the history */
 
         document.getElementById('main').innerHTML = matchedRoute.template()     //Finally render the right template for this route
     }

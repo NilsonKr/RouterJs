@@ -3,8 +3,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin')
 const copyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-    entry:'./src/main.js',
-
+    entry: path.resolve(__dirname, 'src', 'main.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename : 'main.js'
@@ -17,9 +16,7 @@ module.exports = {
             {
             test: /\.js$/,
             exclude: /node_modules/,
-            use: {
-                loader:'babel-loader'
-            },
+            use: 'babel-loader'
         }]
     },
     plugins :[
@@ -29,10 +26,7 @@ module.exports = {
             filename: './index.html',
         }),
         new copyWebpackPlugin({
-            patterns: [{
-                from:'./styles/style.css',
-                to:''
-            },
+            patterns: [
             {
                 from: './styles/',
                 to: ''

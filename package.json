@@ -1,18 +1,21 @@
 {
-  "name": "routerJs",
+  "name": "@nilsonkr/router_js",
   "version": "1.0.0",
   "description": "Implementing a router on vanilla JS 👨‍💻👩‍💻",
   "main": "index.js",
   "dependencies": {
-    "webpack-dev-server": "^3.11.2"
+    "@babel/runtime": "^7.12.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "babel-loader": "^8.2.2",
+    "@babel/core": "7.12.10",
+    "@babel/plugin-transform-runtime": "7.12.10",
+    "@babel/preset-env": "7.12.11",
+    "babel-loader": "8.2.2",
     "copy-webpack-plugin": "^6.2.1",
     "html-webpack-plugin": "^4.5.1",
     "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "3.11.2"
   },
   "scripts": {
     "build": "webpack --mode production",
