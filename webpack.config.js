@@ -14,10 +14,20 @@ module.exports = {
     module:{
         rules:[
             {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: 'babel-loader'
-        }]
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            },
+            {
+                test: /\.(svg|png|jpg|)$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 90000,
+                    }
+                }
+            }
+        ]
     },
     plugins :[
         new htmlWebpackPlugin({
