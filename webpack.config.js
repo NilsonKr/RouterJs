@@ -1,12 +1,14 @@
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
-const copyWebpackPlugin = require('copy-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'main.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename : 'main.js'
+        filename : 'src/main.js',
+        
     },
     resolve:{
         extensions : ['.js']
@@ -26,22 +28,28 @@ module.exports = {
                         limit: 90000,
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    'css-loader'
+                ]
             }
         ]
     },
     plugins :[
-        new htmlWebpackPlugin({
-            inject: true,
-            template: './index.html',
-            filename: './index.html',
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].css'
         }),
-        new copyWebpackPlugin({
-            patterns: [
-            {
-                from: './styles/',
-                to: ''
-            }
-        ]
+        new htmlWebpackPlugin({
+            template: './index.html',
+            filename: 'index.html',
+        }),
+        new CopyWebpackPlugin({
+            patterns:[{from: path.resolve(__dirname, 'styles', 'icons'), to:'icons/'}]
         })
     ]
 }

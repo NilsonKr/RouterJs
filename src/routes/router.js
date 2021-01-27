@@ -17,7 +17,7 @@ class router{
             }
         }
 
-        const url = `/${pathSegs}`      
+       /*  const url = `/${pathSegs}`     */  
                              
        /*  history.pushState({},'',url)        //Push the url to the history */
 

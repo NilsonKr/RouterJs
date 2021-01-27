@@ -5,7 +5,7 @@ const home = () => {
     <section class="presentation">
         <h1>Hello World!</h1>
         <p>On this site you're going to find some articles that may be could help you in one of all developer's problems</p>
-        <img src=${ logo } />
+        <img src=${ logo } />    
     </section>
     <section class="main-content">
         <div class="posts">
