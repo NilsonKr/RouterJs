@@ -7,7 +7,7 @@ module.exports = {
     entry: path.resolve(__dirname, 'src', 'main.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename : 'src/main.js',
+        filename : 'src/bundle.js',
         
     },
     resolve:{
@@ -29,7 +29,7 @@ module.exports = {
                     }
                 }
             },
-            {
+/*             {
                 test: /\.css$/,
                 use: [
                     {
@@ -37,19 +37,19 @@ module.exports = {
                     },
                     'css-loader'
                 ]
-            }
+            } */
         ]
     },
-    plugins :[
+    plugins :[/* 
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
-        }),
+        }), */
         new htmlWebpackPlugin({
             template: './index.html',
             filename: 'index.html',
         }),
         new CopyWebpackPlugin({
-            patterns:[{from: path.resolve(__dirname, 'styles', 'icons'), to:'icons/'}]
+            patterns:[{from: path.resolve(__dirname, 'styles'), to:'styles/'}]
         })
     ]
 }
